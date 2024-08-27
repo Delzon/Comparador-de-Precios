@@ -1,11 +1,12 @@
-const CACHE_NAME = 'comparador-precios-cache-v2';  // Cambia este nombre con cada actualización
+const CACHE_NAME = 'comparador-precios-cache-v2.1';  // Cambia este nombre con cada actualización
 const urlsToCache = [
     './',
     './index.html',
     './styles.css',
     './script.js',
     './favicon.ico',
-    './manifest.webmanifest'
+    './manifest.webmanifest',
+    './icon-192x192.png'
 ];
 
 self.addEventListener('install', event => {
@@ -24,10 +25,13 @@ self.addEventListener('activate', event => {
             return Promise.all(
                 cacheNames.map(cacheName => {
                     if (cacheWhitelist.indexOf(cacheName) === -1) {
+                        console.log(`Eliminando caché antigua: ${cacheName}`);
                         return caches.delete(cacheName);  // Elimina cachés antiguas
                     }
                 })
             );
+        }).then(() => {
+            return self.clients.claim();  // Toma control inmediato de los clientes
         })
     );
 });

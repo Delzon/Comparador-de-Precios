@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+.container {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+h1 {
+    margin: 0; /* Elimina el margen por defecto */
+    margin-bottom: 20px; /* Espacio entre el título y el resto del contenido */
+    color: #e0e0e0; /* Color del texto del título */
+    text-align: center; /* Centra el texto dentro del título */
+}
+
+h2 {
+    color: #e0e0e0; /* Color del texto de los subtítulos */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #b0b0b0; /* Color del texto de las etiquetas */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #333; /* Borde del campo de entrada */
+    background-color: #333; /* Fondo del campo de entrada */
+    color: #e0e0e0; /* Color del texto en el campo de entrada */
+    border-radius: 4px; /* Bordes redondeados en el campo de entrada */
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745; /* Color de fondo del botón */
+    border: none;
+    color: #ffffff; /* Color del texto del botón */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px; /* Bordes redondeados del botón */
+}
+
+button:hover {
+    background-color: #218838; /* Color de fondo del botón al pasar el ratón */
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+}
